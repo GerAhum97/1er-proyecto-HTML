@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/misEstilos.css">
+    <title>Hotel San José</title>
+</head>
+<body>
+  <div>
+    <header>
+      <h1 style="font-size: 80px;"> <strong> Hotel San José </strong></h1>
+      ¡Tu lugar favorito de descanso!
+    </header>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Inicio</a></li>
+        <li><a href="Habitaciones.html" id="hab">Habitaciones</a></li>
+        <li><a href="Servicios.html">Servicios</a></li>
+        <li><a href="Reservas.html">Reservas</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+        <li><a href="#">Administración</a></li>
+      </ul>
+    </nav>
+    <div style="text-align: center;">
+      <span style="font-size: 40px; text-decoration: underline;">Bienvenidos a nuestro gran Hotel</span>
+    </div>    
+  </div>
+       <h1 style="text-align: center; text-decoration: overline;">Bienvenidos a la página de la Administración del Hotel San José</h1>  
+       
+       <div class="navegacion-horizontal" style="text-align: center;">
+            <span id="btn-estado">Estado de la Habitación</span>
+            <span id="btn-reservas">Reservas</span>
+            <span id="btn-creacion">Creación de Reservas</span>
+       </div>
+  <div class="secciones">
+       <!-- SECCIÓN ESTADO --> 
+       <div id="seccion-estado">
+          <br><br>
+           <h1>Sección de estado</h1>
+           <table class="tabla-estado">
+              <tr>
+                 <th>Habitacion</th>
+                 <th>Estado</th>
+              </tr>
+              <tr>
+                <td>101</td>
+                <td id="estado-101"></td>
+             </tr>
+             <tr>
+              <td>102</td>
+              <td id="estado-102"></td>
+             </tr>
+             <tr>
+              <td>103</td>
+              <td id="estado-103"></td>
+             </tr>                                         
+             <tr>
+              <td>201</td>
+              <td id="estado-201"></td>
+             </tr> 
+             <tr>
+              <td>202</td>
+              <td id="estado-202"></td>
+             </tr>
+             <tr>
+              <td>203</td>
+              <td id="estado-203"></td>
+             </tr>
+             <tr>
+              <td colspan="2" style="text-align: center;">
+                  <button id="btnActualizarEstado"> Actualizar estado </button> 
+              </td>
+             </tr>                                        
+           </table>   
+       </div>
+       <!-- FIN SECCIÓN ESTADO -->
+       <!-- SECCIÓN RESERVAS --> 
+       <div id="seccion-reservas" style="display: none;">
+        <h1>Sección de reservas</h1>
+           <table class="tabla-reserva">
+              <tr>
+                 <th>Habitación</th>
+                 <th>01/07/2023</th>
+                 <th>02/07/2023</th>
+                 <th>03/07/2023</th>
+              </tr>
+              <tr id="reserva-101">
+                 <td>101</td>
+                 <td></td>
+                 <td></td>
+              </tr>
+              <tr id="reserva-102">
+                 <td>102</td>
+                 <td></td>
+                 <td></td>
+              </tr>
+              <tr id="reserva-103">
+                <td>103</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr id="reserva-201">
+                <td>201</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr id="reserva-202">
+                <td>202</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr id="reserva-203">
+                <td>203</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td colspan="4" style="text-align: center;">
+                    <button id="btnActualizarReservas"> Actualizar reservas </button> 
+                </td>
+              </tr>
+             
+           </table> 
+       </div>
+       <!-- FIN SECCIÓN RESERVAS -->
+       <!-- SECCIÓN CREACIÓN DE RESERVAS -->
+       <h2 style="text-align: center;"> Crear nuevas reservas</h2>        
+       <div id="seccion-creacion" style="display: none;">
+        <h1>Sección de creación</h1>
+
+        <br>
+        <br>
+        <label for="habitacion-select">
+              Seleccione una Habitación: 
+        </label>
+        <select id="habitacion-select"></select>
+        <br>
+        <br>
+        <label for="habitacion-fecha">
+              Seleccione una Fecha:
+        </label>
+        <select id="habitacion-fecha">
+          <option value="01-07-2023">01-07-2023</option>
+          <option value="02-07-2023">02-07-2023</option>
+          <option value="03-07-2023">03-07-2023</option>
+        </select>
+        <br>
+        <br>
+      <button id="reservar-habitacion">Reservar</button>
+       </div>
+       <!-- FIN SECCIÓN CREACIÓN DE RESERVAS -->                         
+  </div>
+</body> 
+
+<script src="./scripts/admin.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>

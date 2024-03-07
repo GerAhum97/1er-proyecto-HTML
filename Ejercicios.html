@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+<h1>Calculadora simple</h1>
+
+<div>
+   <div>
+    <label for="numero1">Número</label>
+    <input required id="numero1" name="numero1" type="text" placeholder="Escriba un número">
+   </div>
+   <div>
+    <label for="numero2">Número</label>
+    <input required id="numero2" name="numero2" type="text" placeholder="Escriba un número">
+   </div>
+   
+  <br><br>
+  <div>
+    <span>Seleccione una operación</span><br>
+    <input type="radio" id="operacion1" name="operacion" value="S">
+    <label for="operacion1"> Sumar </label><br>
+    <input type="radio" id="operacion2" name="operacion" value="R"> 
+    <label for="operacion2"> Restar </label><br>
+    <input type="radio" id="operacion3" name="operacion" value="M">
+    <label for="operacion3"> Multiplicar </label><br>
+    <input type="radio" id="operacion4" name="operacion" value="D">
+    <label for="operacion4"> Dividir </label><br>
+  </div> 
+
+  <div>
+    <label for="respuesta">Respuesta: </label>
+    <input required id="respuesta" name="respuesta" type="text" placeholder="Aquí se verá su respuesta">
+   </div> <br><br>
+
+
+
+   <button id="Resolver" onclick="resolver()" >Resolver</button>
+
+</div>
+</body>
+</html>
+
+<script src="./scripts/ejercicios.js"></script>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/misEstilos.css">
+    <title>Hotel San José</title>
+</head>
+<body>
+  <div>
+    <header>
+      <h1 style="font-size: 80px;"> <strong> Hotel San José </strong></h1>
+      ¡Tu lugar favorito de descanso!
+    </header>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Inicio</a></li>
+        <li><a href="Habitaciones.html">Habitaciones</a></li>
+        <li><a href="Servicios.html">Servicios</a></li>
+        <li><a href="Reservas.html">Reservas</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="Admin.html">Administración</a></li>
+      </ul>
+    </nav>
+    <br><br><br><br>
+    <div style="text-align: center;">
+      <span style="font-size: 40px; text-decoration: overline underline;">Contáctenos</span>
+    </div>    
+  </div>
+  
+    <h1 style="font-family: Arial, Helvetica, sans-serif;">Ingrese sus datos:</h1>
+  <div style="width: 60%; margin-left: 10%;">
+      <ol>
+        <li>
+          <form action="recibeDatos.php" method="POST">
+            <div class="separacion">
+              <label for="nombre">Introduzca su nombre y apellido:</label>
+              <input required id="nombre" name="nombre" type="text" placeholder="Nombre completo">
+            </div>
+            <div class="separacion">
+              <label for="nacimiento">Fecha de Nacimiento:</label>
+              <input id="nacimiento" name="nacimiento" type="date">
+            </div>
+            <div class="separacion">
+                <label for="telefono1">Android</label>
+                <input id="telefono1" type="checkbox">
+                <label for="telefono2">IoS</label>
+                <input id="telefono2" type="checkbox">
+            </div>
+            <div class="separacion">
+              <span>Seleccione su rango de edad</span><br>
+              <input type="radio" id="edad1" name="edad" value="30">
+              <label for="edad1">0 a 30 años</label><br>
+              <input type="radio" id="edad2" name="edad" value="40"> 
+              <label for="edad2">30 a 60 años</label><br>
+              <input type="radio" id="edad3" name="edad" value="60">
+              <label for="edad3">más de 60 años</label><br>
+            </div>                        
+            <div class="separacion">
+              <label for="comentarios">Comentarios:</label>
+              <input id="comentarios" type="text" style="width: 40%; height: 40%;">
+            </div>
+            <div class="separacion">
+              <label for="mail">E-mail:</label>
+              <input id="mail" type="email" placeholder="Introduzca su email">
+            </div>
+            <div class="separacion">
+                <label for="mensaje">Ingrese su mensaje:</label>
+                <textarea id="mensaje" rows="10" cols="40"  ></textarea>
+              </div>
+              <div class="separacion">
+                <input type="submit" value="Enviar">
+            </div>
+            <div class="separacion">
+                <label for="file">Seleccione un archivo:</label>
+                <input type="file" id="file" name="archivo" >
+            </div>
+          </form>
+        </li>
+      </ol>
+  </div>
+  <div>
+      <span onclick="miFuncion()">Ejecutar</span>
+  </div>
+</body>
+<footer>
+  <a id="contacto"></a><p>&copy; 2023 Hotel San José. Todos los derechos reservados. | <a href="politica-privacidad.html">Política de privacidad</a> | <a href="Contacto.html">Contacto</a></p>
+</footer>
+</html>
+
+<script>
+    function miFuncion(){
+            alert("¡Hola " + document.getElementById('nombre').value + "!");
+    }             
+
+</script>
